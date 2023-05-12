@@ -35,8 +35,7 @@ Train Report
          4.9       0.00      0.00      0.00         2
 
     accuracy                           0.75      1455
-   macro avg       0.66      0.60      0.62      1455
-weighted avg       0.75      0.75      0.75      1455
+  
 
 Test Report
               precision    recall  f1-score   support
@@ -50,8 +49,7 @@ Test Report
          4.8       0.20      0.14      0.17         7
 
     accuracy                           0.37       485
-   macro avg       0.37      0.32      0.33       485
-weighted avg       0.38      0.37      0.36       485
+
 
 
 Confusion Metrix
