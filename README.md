@@ -1,6 +1,8 @@
 # Wine-quality
 # Quick Insight
-Finding the quality of spanish wine. This is important so the company can see what the average consumer would enjoy. The end goal is to get more returning customers.
+This dataset is red variants of spanish wines. The dataset describes several popularity and description metrics their effect on it's quality. The datasets can be used for classification or regression purposes. The classes are ordered and not balanced (quality goes from 5 to 4). The task is to predict either the quality of wine or the prices using the given data.
+
+Content
 # Source 
 Data set is from Kaggle (https://www.kaggle.com/datasets/fedesoriano/spanish-wine-quality-dataset)
 
@@ -20,40 +22,42 @@ Here it shows the more expensive tbe wine is the higher the rating is. This is g
 
 # Best Model
 
-Classification
 
+Confusion Metrix
+![image](https://github.com/Jonher0100/Wine-quality/assets/127071673/800d66d0-db3c-4bce-afba-0b4c355e7e0c)
+
+
+Classification
 Train Report
               precision    recall  f1-score   support
 
-         4.2       0.87      0.75      0.80       165
-         4.3       0.74      0.88      0.81       484
-         4.4       0.75      0.78      0.76       360
-         4.5       0.76      0.60      0.67       191
-         4.6       0.66      0.59      0.62       132
-         4.7       0.71      0.60      0.65        84
-         4.8       0.79      0.59      0.68        37
+         4.2       0.57      0.31      0.40       165
+         4.3       0.45      0.81      0.58       484
+         4.4       0.40      0.31      0.35       360
+         4.5       0.46      0.17      0.25       191
+         4.6       0.46      0.30      0.36       132
+         4.7       0.59      0.31      0.41        84
+         4.8       0.71      0.32      0.44        37
          4.9       0.00      0.00      0.00         2
 
-    accuracy                           0.75      1455
-  
+    accuracy                           0.46      1455
+   macro avg       0.46      0.32      0.35      1455
+weighted avg       0.47      0.46      0.43      1455
 
 Test Report
               precision    recall  f1-score   support
 
-         4.2       0.61      0.35      0.45        54
-         4.3       0.42      0.58      0.49       159
-         4.4       0.23      0.29      0.26       102
-         4.5       0.33      0.17      0.23        86
-         4.6       0.35      0.17      0.23        53
-         4.7       0.44      0.50      0.47        24
-         4.8       0.20      0.14      0.17         7
+         4.2       0.47      0.17      0.25        54
+         4.3       0.39      0.78      0.52       159
+         4.4       0.28      0.24      0.25       102
+         4.5       0.21      0.06      0.09        86
+         4.6       0.35      0.11      0.17        53
+         4.7       0.67      0.42      0.51        24
+         4.8       0.14      0.14      0.14         7
 
     accuracy                           0.37       485
+   macro avg       0.36      0.27      0.28       485
+weighted avg       0.35      0.37      0.31       485
 
 
-
-Confusion Metrix
-
-![image](https://github.com/Jonher0100/Wine-quality/assets/127071673/1370075f-329b-461e-afe8-7f667715231d)
-
-Tnis model I would use to predict the quality of spanish wine. This is a regular random forest model. This model has a 70% of having a rating of 4.2 and a 67% of being a 4.3. This is the most positive outcome with the model types I tried. The price point of 4.2 is constistently lower than the higher priced wines. This is good so new customers can try something in this rating depending on their budget. The only recommendation would be the cost of making the product. Then, compare the cost of the other wines and determine which wine is the most popular.
+This model I would use to predict the quality of spanish wine. This is a PCA LR model. This model has a 69% of having a rating of 4.2 and 4.4. The best overall percentage is 78 which has a rating of 4.3. This is the most positive outcome with the model types I tried. The price point of 4.2 and 4.3 is constistently lower than the higher priced wines. This is good so new customers can try something in this rating depending on their budget. The only recommendation would be the cost of making the product. Then, compare the cost of the other wines and determine which wine is the most popular.
